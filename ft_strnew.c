@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 12:24:02 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/09 12:50:39 by penzo            ###   ########.fr       */
+/*   Created: 2018/11/10 19:24:14 by penzo             #+#    #+#             */
+/*   Updated: 2018/11/10 19:45:02 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+#include "libft.h"
+
+char	*ft_strnew(size_t size)
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	return (c);
+	char	*str;
+
+	if(!(str = (char*)malloc(sizeof(char) * (size + 1))))
+		return (0);
+	return (str);
 }

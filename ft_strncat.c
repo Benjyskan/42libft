@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 12:24:02 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/09 12:50:39 by penzo            ###   ########.fr       */
+/*   Created: 2018/11/10 14:06:01 by penzo             #+#    #+#             */
+/*   Updated: 2018/11/10 19:14:43 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+#include "libft.h"
+
+char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	return (c);
+	int		i;
+	int		s1_len;
+
+	i = 0;
+	s1_len = ft_strlen(s1);
+	while (s2[i] && n > 0)
+	{
+		s1[s1_len + i] = s2[i];
+		i++;
+		n--;
+	}
+	s1[ft_strlen(s1) + i] = 0;
+	return (s1);
 }

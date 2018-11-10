@@ -1,18 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 12:24:02 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/09 12:50:39 by penzo            ###   ########.fr       */
+/*   Created: 2018/11/10 13:41:27 by penzo             #+#    #+#             */
+/*   Updated: 2018/11/10 14:02:00 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+/*char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	return (c);
+	int		i;
+
+	i = 0;
+	while (src[i] && len > 0)
+	{
+		dst[i] = src[i];
+		i++;
+		len--;
+	}
+	while (len > 0)
+	{
+		dst[i] = 0;
+		i++;
+		len--;
+	}
+}*/
+#include <stdio.h>
+
+char	*ft_strncpy(char *dst, const char *src, size_t len)
+{
+	int		i;
+
+	i = 0;
+	while (len > 0)
+	{
+		if (src[i])
+			dst[i] = src[i];
+		else
+			dst[i] = 0;
+		i++;
+		len--;
+	}
+	return (dst);
 }

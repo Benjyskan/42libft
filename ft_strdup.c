@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 12:24:02 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/09 12:50:39 by penzo            ###   ########.fr       */
+/*   Created: 2018/11/09 18:12:15 by penzo             #+#    #+#             */
+/*   Updated: 2018/11/10 12:06:46 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+#include "libft.h"
+
+char	*ft_strdup(const char *s1)
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	return (c);
+	char	*dest;
+	int		i;
+
+	dest = 0;
+	if (!(dest = ((char*)malloc(sizeof(char) * ft_strlen(s1) + 1))))
+		return (dest);
+	i = 0;
+	while (s1[i])
+	{
+		dest[i] = s1[i];
+		i++;
+	}
+	dest[i] = 0;
+	return (dest);
 }
