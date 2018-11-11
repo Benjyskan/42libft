@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/10 19:46:36 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/11 13:54:49 by penzo            ###   ########.fr       */
+/*   Created: 2018/11/11 14:51:36 by penzo             #+#    #+#             */
+/*   Updated: 2018/11/11 14:56:27 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void	ft_strdel(char **as)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (as != 0)
+	int		last_digit;
+
+	if (n == 0)
 	{
-		free(*as);
-		*as = NULL;
+		ft_putchar_fd('0', fd);
+		return ;
 	}
-	return ;
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = -n;
+	}
+	if (n / 10 != 0)
+		ft_putnbr_fd(n /10, fd);
+	last_digit = n % 10;
+	ft_putchar_fd(last_digit + 48, fd);
 }
