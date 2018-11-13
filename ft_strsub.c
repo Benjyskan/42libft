@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 17:26:51 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/13 18:42:47 by penzo            ###   ########.fr       */
+/*   Created: 2018/11/13 18:42:57 by penzo             #+#    #+#             */
+/*   Updated: 2018/11/13 19:07:31 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*res;
-	int		len;
 	int		i;
 	int		j;
 
-	len = ft_strlen(s1) + ft_strlen(s2);
-	if (!(res = ft_strnew(len + 1)))
+	if (!(res = malloc(sizeof(char) * len + 1)))
 		return (NULL);
-	ft_strncpy(res, s1, len);
-	i = ft_strlen(s1);
-	j = 0;
-	while (i < len)
+	j = start;
+	ft_putendl("Hey");
+	i = 0;
+	while (len)
 	{
-		res[i] = s2[j];
+		res[i] = s[j];
 		i++;
 		j++;
+		len--;
 	}
-	res[i] = 0;
+	ft_putendl("Hey");
 	return (res);
 }

@@ -28,11 +28,16 @@ CFILES=ft_tolower.c \
 	   ft_putendl_fd.c \
 	   ft_itoa.c \
 	   ft_strsplit.c \
+	   ft_strrev.c \
+	   ft_strtrim.c \
+	   ft_strjoin.c \
+	   ft_strsub.c \
+	   ft_strnequ.c \
 
 OFILES=${CFILES:.c=.o}
 
 all:
-	$(CC) -c $(CFILES) 
+	$(CC) -c $(CFLAGS) $(CFILES) 
 	ar rcs $(NAME) $(OFILES)
 	ranlib $(NAME)
 clean:
