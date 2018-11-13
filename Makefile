@@ -32,7 +32,7 @@ CFILES=ft_tolower.c \
 OFILES=${CFILES:.c=.o}
 
 all:
-	$(CC) $(CFLAGS) -c $(CFILES) 
+	$(CC) -c $(CFILES) 
 	ar rcs $(NAME) $(OFILES)
 	ranlib $(NAME)
 clean:
