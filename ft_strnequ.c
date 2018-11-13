@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 19:10:30 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/13 19:22:47 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/13 19:59:30 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 	int		i;
 
 	i = 0;
-	while(s1[i] && n > 0)
+	while (s1[i] && n > 0)
 	{
 		if (s1[i] != s2[i])
 			return (0);
