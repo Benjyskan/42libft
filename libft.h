@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 14:00:22 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/15 13:04:49 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/15 14:39:55 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 char	*ft_itoa(int n);
+int     ft_atoi(const char *str);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_strrev(char const *s);
 char	*ft_strtrim(char const *s);
