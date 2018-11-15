@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 14:00:22 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/15 14:39:55 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/15 16:29:50 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strcat(char *restrict s1, const char *restrict s2);
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
-size_t  ft_strlcat(char *restrict dst, const char *restrict src, size_t size);
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size);
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
 void	ft_strclr(char *s);
@@ -68,5 +68,4 @@ void    *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t 
 void    *ft_memmove(void *dst, const void *src, size_t len);
 void    *ft_memchr(const void *s, int c, size_t n);
 int     ft_memcmp(const void *s1, const void *s2, size_t n);
-int     test_strlen(const char *str); //A virer
 #endif

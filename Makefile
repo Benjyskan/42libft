@@ -54,7 +54,6 @@ CFILES=ft_tolower.c \
 	   ft_memmove.c \
 	   ft_memchr.c \
 	   ft_memcmp.c \
-	   test_strlen.c #A virer
 
 OFILES=${CFILES:.c=.o}
 
