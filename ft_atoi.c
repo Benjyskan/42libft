@@ -6,13 +6,13 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 14:31:37 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/15 15:55:14 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/18 15:23:33 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_skipblank(const char *str)
+static int		ft_skipblank(const char *str)
 {
 	int		i;
 
@@ -23,7 +23,7 @@ int		ft_skipblank(const char *str)
 	return (i);
 }
 
-int		ft_chartoint(const char *str)
+static int		ft_chartoint(const char *str)
 {
 	int		res;
 	int		i;

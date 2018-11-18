@@ -6,14 +6,14 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 15:04:57 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/17 16:23:52 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/18 15:24:36 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int		ft_getnblen(int n)
+static int	ft_getnblen(int n)
 {
 	int		len;
 
@@ -33,7 +33,7 @@ int		ft_getnblen(int n)
 	return (len);
 }
 
-char	*ft_allocate(int n)
+static char	*ft_allocate(int n)
 {
 	char	*str;
 
@@ -42,7 +42,7 @@ char	*ft_allocate(int n)
 	return (str);
 }
 
-char	*ft_intmin(void)
+static char	*ft_intmin(void)
 {
 	char	*str;
 
