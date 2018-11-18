@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 16:16:53 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/18 17:56:49 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/18 18:16:19 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strtrim(char const *s)
 	{
 		i++;
 		if (s[i] == 0)
-			return ("");
+			return (ft_strnew(0));
 	}
 	res = (char*)&s[i];
 	if (!(res = ft_strrev(res)))
