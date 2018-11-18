@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 16:16:53 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/18 17:54:30 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/18 17:56:49 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ char	*ft_strtrim(char const *s)
 	/*if (!(res2 = ft_strnew(ft_strlen(res))))
 		return (NULL);
 	ft_strcpy(res2, res);*/
-	ft_strdup(res2, res);
+	if (!(res2 = ft_strdup(res)))
+		return (NULL);
 	return (res2);
 }
