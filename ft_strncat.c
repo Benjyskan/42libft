@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 20:01:15 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/15 16:11:28 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/17 10:04:37 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 		i++;
 		n--;
 	}
-	s1[ft_strlen(s1) + i] = 0;
+	s1[s1_len + i] = 0;
 	return (s1);
 }

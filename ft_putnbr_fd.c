@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 14:51:36 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/13 19:52:25 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/17 17:10:42 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int		last_digit;
-
+	if (n == -2147483648)
+	{
+		ft_putstr_fd("-2147483648", fd);
+		return ;
+	}
 	if (n == 0)
 	{
 		ft_putchar_fd('0', fd);
@@ -28,6 +31,5 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n / 10 != 0)
 		ft_putnbr_fd(n / 10, fd);
-	last_digit = n % 10;
-	ft_putchar_fd(last_digit + 48, fd);
+	ft_putchar_fd((n % 10) + 48, fd);
 }

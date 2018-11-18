@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:22:36 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/14 15:35:26 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/18 11:15:26 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	int		i;
 
 	i = ft_strlen(s);
-	while (i)
+	while (i >= 0)
 	{
 		if (s[i] == (char)c)
 			return ((char*)&s[i]);

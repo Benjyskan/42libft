@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 17:26:51 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/13 18:42:47 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/17 15:47:31 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
+	if (!s1)
+		return ((char*)s2);
+	if (!s2)
+		return ((char*)s1);
+	if (!s1 && !s2)
+		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
 	if (!(res = ft_strnew(len + 1)))
 		return (NULL);

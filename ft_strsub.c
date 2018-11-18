@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 18:42:57 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/13 19:07:31 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/17 15:43:42 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	int		i;
 	int		j;
 
+	if (!s)
+		return (NULL);
 	if (!(res = malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	j = start;
-	ft_putendl("Hey");
 	i = 0;
 	while (len)
 	{
@@ -30,6 +31,6 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		j++;
 		len--;
 	}
-	ft_putendl("Hey");
+	res[i] = 0;
 	return (res);
 }

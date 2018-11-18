@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 16:28:39 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/13 16:56:59 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/17 14:55:43 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strrev(char const *s)
 	int		i;
 
 	len = ft_strlen(s);
-	res = ft_strnew(len);
+	if (!(res = ft_strnew(len)))
+		return (0);
 	i = 0;
 	while (len)
 	{

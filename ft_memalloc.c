@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 19:26:02 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/13 19:31:50 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/18 14:00:04 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,15 @@
 void	*ft_memalloc(size_t size)
 {
 	void	*new;
+	int		i;
 
 	if (!(new = malloc(size)))
 		return (NULL);
-	new = 0;
+	i = 0;
+	while (i < (int)size)
+	{
+		((char*)new)[i] = 0;
+		i++;
+	}
 	return (new);
 }

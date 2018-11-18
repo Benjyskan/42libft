@@ -6,10 +6,9 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 19:46:13 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/17 20:02:16 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/18 14:06:04 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -19,9 +18,7 @@ char	*ft_strndup(const char *s1, size_t n)
 	int		i;
 	int		length;
 
-	//dest = 0;
 	length = (n < ft_strlen(s1) ? n : ft_strlen(s1));
-	//if (!(dest = ((char*)malloc(sizeof(char) * ft_strlen(s1) + 1))))
 	if (!(dest = ((char*)malloc(sizeof(char) * (length + 1)))))
 		return (dest);
 	i = 0;

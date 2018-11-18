@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 12:52:16 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/15 13:03:17 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/16 18:32:36 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	int		i;
 
 	i = 0;
-	while (i < (int)n && ((char*)s))
+	while (i < (int)n)
 	{
 		if (((char*)s)[i] == (char)c)
 			return ((void*)s + i);
