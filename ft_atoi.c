@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 14:31:37 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/18 15:23:33 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/18 15:54:51 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static int		ft_chartoint(const char *str)
 	return (res);
 }
 
-int		ft_atoi(const char *str)
+int				ft_atoi(const char *str)
 {
 	int		i;
 	int		modifier;

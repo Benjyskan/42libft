@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 17:59:49 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/18 15:25:42 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/18 15:55:50 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ static char	**ft_filldashit(char **tab, char *ss, char c, int j)
 	return (tab);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
 	int		i;
