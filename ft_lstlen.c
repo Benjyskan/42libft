@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/18 09:51:50 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/20 13:01:20 by penzo            ###   ########.fr       */
+/*   Created: 2018/11/20 15:29:03 by penzo             #+#    #+#             */
+/*   Updated: 2018/11/20 15:52:08 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+int		ft_lstlen(t_list *lst)
 {
-	if (new && alst)
+	int		i;
+
+	if (lst)
 	{
-		new->next = *alst;
-		*alst = new;
-		return ;
+		i = 1;
+		while (lst->next)
+		{
+			lst = lst->next;
+			i++;
+		}
+		return (i);
 	}
-	return ;
+	return (0);
 }

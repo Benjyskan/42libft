@@ -30,6 +30,7 @@ CFILES=ft_tolower.c \
 	   ft_putendl_fd.c \
 	   ft_itoa.c \
 	   ft_atoi.c \
+	   ft_swap.c \
 	   ft_strsplit.c \
 	   ft_strrev.c \
 	   ft_strtrim.c \
@@ -56,9 +57,11 @@ CFILES=ft_tolower.c \
 	   ft_memchr.c \
 	   ft_memcmp.c \
 	   ft_lstnew.c \
+	   ft_lstlen.c \
 	   ft_lstdelone.c \
 	   ft_lstdel.c \
 	   ft_lstadd.c \
+	   ft_lstappend.c \
 	   ft_lstiter.c \
 	   ft_lstmap.c \
 

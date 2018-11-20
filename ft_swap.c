@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/18 09:51:50 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/20 13:01:20 by penzo            ###   ########.fr       */
+/*   Created: 2018/11/20 13:07:17 by penzo             #+#    #+#             */
+/*   Updated: 2018/11/20 15:25:42 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_swap(void *a, void *b)
 {
-	if (new && alst)
-	{
-		new->next = *alst;
-		*alst = new;
+	void	*tmp;
+
+	if (!(tmp = malloc(sizeof(a))))
 		return ;
-	}
+	ft_memcpy(tmp, b, sizeof(a));
+	ft_memcpy(b, a, sizeof(a));
+	ft_memcpy(a, tmp, sizeof(a));
+	free(tmp);
 	return ;
 }
