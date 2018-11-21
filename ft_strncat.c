@@ -6,13 +6,13 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 20:01:15 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/17 10:04:37 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/21 09:23:20 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	int		i;
 	int		s1_len;

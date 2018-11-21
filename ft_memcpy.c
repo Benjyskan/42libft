@@ -6,13 +6,13 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 11:30:25 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/15 11:50:23 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/20 20:38:45 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	int		i;
 
