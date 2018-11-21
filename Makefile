@@ -66,14 +66,21 @@ CFILES=ft_tolower.c \
 	   ft_lstmap.c \
 
 OFILES=${CFILES:.c=.o}
+DEPS=libft.h
 
-$(NAME): 
-	$(CC) -c $(CFLAGS) $(CFILES) 
-	ar rcs $(NAME) $(OFILES)
+$(NAME): $(OFILES)
+	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
+
+%.o: %.c $(DEPS)
+	$(CC) -o $@ -c $< $(CFLAGS)
+
 all: $(NAME)
+
 clean:
 	rm -f $(OFILES)
+
 fclean: clean
 	rm -f $(NAME)
+
 re: fclean all
