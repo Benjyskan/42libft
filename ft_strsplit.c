@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 17:59:49 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/18 15:55:50 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/21 12:18:43 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,11 @@ static char	**ft_filldashit(char **tab, char *ss, char c, int j)
 		if (in_word == 0 && ss[i] != c)
 		{
 			in_word = 1;
-			tab[j] = ft_strndup(&ss[i], ft_getwordlen(&ss[i], c));
+			if (!(tab[j] = ft_strndup(&ss[i], ft_getwordlen(&ss[i], c))))
+			{
+				free(tab);
+				return (NULL);
+			}
 			j++;
 		}
 		if (in_word == 1 && ss[i] == c)
@@ -84,7 +88,7 @@ char		**ft_strsplit(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	if (!(tab = malloc(sizeof(char**) * (ft_count_words(s, c) + 1))))
+	if (!(tab = (char**)malloc(sizeof(char**) * (ft_count_words(s, c) + 1))))
 		return (NULL);
 	set_variables(&i, &j, &in_word);
 	ft_filldashit(tab, (char*)s, c, j);
