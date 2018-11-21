@@ -6,7 +6,7 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 12:37:38 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/18 13:56:10 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/21 11:01:54 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		((unsigned char*)dst)[i] = ((unsigned char*)tmp)[i];
 		i++;
 	}
+	free(tmp);
 	return (dst);
 }
