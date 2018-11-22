@@ -6,14 +6,14 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 14:00:22 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/21 09:40:25 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/22 11:09:01 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
+# include <string.h>
 
 int					ft_tolower(int c);
 int					ft_toupper(int c);
