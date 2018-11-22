@@ -6,11 +6,12 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 15:05:01 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/16 15:05:03 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/22 11:38:53 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {

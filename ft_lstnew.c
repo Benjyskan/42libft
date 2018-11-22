@@ -6,11 +6,12 @@
 /*   By: penzo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 17:24:36 by penzo             #+#    #+#             */
-/*   Updated: 2018/11/18 14:04:05 by penzo            ###   ########.fr       */
+/*   Updated: 2018/11/22 11:38:12 by penzo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
