@@ -64,6 +64,7 @@ CFILES=ft_tolower.c \
 	   ft_lstappend.c \
 	   ft_lstiter.c \
 	   ft_lstmap.c \
+	   ft_strcmp_until_c \
 
 OFILES=${CFILES:.c=.o}
 DEPS=libft.h
